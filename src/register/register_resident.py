@@ -1,6 +1,6 @@
 import sys
 from PyQt5 import QtWidgets
-
+import re
 from UI.register_ui.register_resident_ui import Ui_register_resident
 from src.db_config import db_connect
 
@@ -16,6 +16,13 @@ class  RegisterResident(QtWidgets.QWidget):
     def register_resident_clicked(self):
         print("register_resident_clicked")
         email = self.ui.lineEdit.text()
+
+        #使用正则表达式判断邮箱格式
+        pattern = re.compile(r'^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$')
+        if not pattern.match(email):
+            print("邮箱格式错误")
+            QtWidgets.QMessageBox.warning(self, "Warning", "邮箱格式错误")
+            return
         name = self.ui.lineEdit_2.text()
         employer = self.ui.lineEdit_3.text()
         family_size = self.ui.lineEdit_4.text()
@@ -23,10 +30,16 @@ class  RegisterResident(QtWidgets.QWidget):
         conn = db_connect()
         cursor = conn.cursor()
         sql = '''INSERT INTO residents (email, owner_name, employer, family_size) VALUES (%s, %s, %s, %s);'''
-        cursor.execute(sql, values)
-        conn.commit()
-        conn.close()
+        try:
+            cursor.execute(sql, values)
 
+        except Exception as e:
+            print(e)
+            return
+        else:
+            conn.commit()
+            conn.close()
+        print('commit success')
         print(email, name, employer, family_size)
         self.close()
 

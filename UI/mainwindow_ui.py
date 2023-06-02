@@ -35,9 +35,6 @@ class Ui_MainWindow(object):
         self.query_btn = QtWidgets.QPushButton(self.centralwidget)
         self.query_btn.setGeometry(QtCore.QRect(140, 380, 93, 28))
         self.query_btn.setObjectName("query_btn")
-        self.listView = QtWidgets.QListView(self.centralwidget)
-        self.listView.setGeometry(QtCore.QRect(140, 60, 501, 281))
-        self.listView.setObjectName("listView")
         self.clear_btn = QtWidgets.QPushButton(self.centralwidget)
         self.clear_btn.setGeometry(QtCore.QRect(680, 70, 93, 28))
         self.clear_btn.setObjectName("clear_btn")
@@ -87,6 +84,9 @@ class Ui_MainWindow(object):
         self.sum_resident_btn = QtWidgets.QPushButton(self.centralwidget)
         self.sum_resident_btn.setGeometry(QtCore.QRect(680, 380, 131, 28))
         self.sum_resident_btn.setObjectName("sum_resident_btn")
+        self.tableView = QtWidgets.QTableView(self.centralwidget)
+        self.tableView.setGeometry(QtCore.QRect(140, 40, 501, 331))
+        self.tableView.setObjectName("tableView")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 840, 26))
@@ -98,6 +98,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.exit_btn.clicked.connect(MainWindow.close) # type: ignore
+        self.clear_btn.clicked.connect(self.tableView.clearSelection) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

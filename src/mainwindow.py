@@ -1,5 +1,7 @@
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QHeaderView
+from src.db_config import db_connect
 from src.register.register_resident import RegisterResident
 from src.register.register_building import RegisterBuilding
 from src.register.register_house import RegisterHouse
@@ -8,7 +10,6 @@ from src.register.register_staff import RegisterStaff
 from src.del_resident import DelResident
 from src.update_resident import UpdateResident
 from UI.mainwindow_ui import Ui_MainWindow
-from src.db_config import db_connect
 from src.register.register_maintenance import RegisterMaintenance
 from src.register.register_parking_fees import RegisterParkingFees
 from src.register.register_property_fees import RegisterPropertyFees
@@ -46,8 +47,15 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.sum_resident_btn.clicked.connect(self.sum_resident_btn_clicked)
 
     def clear_btn_clicked(self):
-        model = self.ui.listView.model()
-        model.removeRows(0, model.rowCount())
+        try:
+            model = self.ui.tableView.model()
+            model.clear()
+            model.setHorizontalHeaderLabels([''])
+            self.ui.tableView.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+            self.ui.tableView.verticalHeader().setSectionResizeMode(QHeaderView.Stretch)
+
+        except Exception as e:
+            print(e)
 
     def register_resident_clicked(self):
         print("register_resident_clicked")
@@ -169,7 +177,7 @@ class MainWindow(QtWidgets.QMainWindow):
             model.setHorizontalHeaderLabels(['车位总数'])
             item = QtGui.QStandardItem(str(sum_parking_space))
             model.appendRow(item)
-            self.ui.listView.setModel(model)
+            self.ui.tableView.setModel(model)
 
         except Exception as e:
             print(e)
@@ -189,7 +197,7 @@ class MainWindow(QtWidgets.QMainWindow):
             model.setHorizontalHeaderLabels(['住户总数'])
             item = QtGui.QStandardItem(str(sum_resident))
             model.appendRow(item)
-            self.ui.listView.setModel(model)
+            self.ui.tableView.setModel(model)
 
         except Exception as e:
             print(e)
