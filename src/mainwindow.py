@@ -14,6 +14,8 @@ from src.register.register_property_fees import RegisterPropertyFees
 from src.delete.del_resident import DelResident
 from src.update.update_resident import UpdateResident
 from src.update.update_staff import UpdateStaff
+from src.update.update_building import UpdateBuilding
+from src.update.update_parking_space import UpdateParkingSpace
 import src.query_all as query_all
 from src.procedure.P_count_fee import P_count_fee
 from src.procedure.p_count_pro_fee import P_count_pro_fee
@@ -37,6 +39,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.P_count_fee = None
         self.P_count_pro_fee = None
         self.update_staff = None
+        self.update_building = None
+        self.update_parking_space = None
 
         self.ui.register_btn.clicked.connect(self.register_resident_clicked)
         self.ui.query_btn.clicked.connect(self.query_resident_clicked)
@@ -158,6 +162,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
         elif self.ui.update_com_box.currentText() == '楼栋信息':
             print("楼栋信息")
+            self.update_building = UpdateBuilding()
+            self.update_building.show()
 
         elif self.ui.update_com_box.currentText() == '员工信息':
             print("员工信息")
@@ -166,7 +172,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
         elif self.ui.update_com_box.currentText() == '车位信息':
             print("车位信息")
-
+            self.update_parking_space = UpdateParkingSpace()
+            self.update_parking_space.show()
 
     def P_count_fee_btn_clicked(self):
         print("P_count_fee_btn_clicked")
