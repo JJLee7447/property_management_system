@@ -1,18 +1,19 @@
 import sys
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtWidgets import QHeaderView
+from UI.mainwindow_ui import Ui_MainWindow
 from src.db_config import db_connect
 from src.register.register_resident import RegisterResident
 from src.register.register_building import RegisterBuilding
 from src.register.register_house import RegisterHouse
 from src.register.register_parking_space import RegisterParkingSpace
 from src.register.register_staff import RegisterStaff
-from src.del_resident import DelResident
-from src.update_resident import UpdateResident
-from UI.mainwindow_ui import Ui_MainWindow
 from src.register.register_maintenance import RegisterMaintenance
 from src.register.register_parking_fees import RegisterParkingFees
 from src.register.register_property_fees import RegisterPropertyFees
+from src.delete.del_resident import DelResident
+from src.update.update_resident import UpdateResident
+from src.update.update_staff import UpdateStaff
 import src.query_all as query_all
 from src.procedure.P_count_fee import P_count_fee
 from src.procedure.p_count_pro_fee import P_count_pro_fee
@@ -35,6 +36,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.register_maintenance = None
         self.P_count_fee = None
         self.P_count_pro_fee = None
+        self.update_staff = None
 
         self.ui.register_btn.clicked.connect(self.register_resident_clicked)
         self.ui.query_btn.clicked.connect(self.query_resident_clicked)
@@ -140,8 +142,12 @@ class MainWindow(QtWidgets.QMainWindow):
             self.del_resident = DelResident()
             self.del_resident.show()
 
-        elif self.ui.del_com_box.currentText() == '楼栋信息':
-            print("楼栋信息")
+        elif self.ui.del_com_box.currentText() == '车位信息':
+            print("车位信息")
+
+        elif self.ui.del_com_box.currentText() == '员工信息':
+            print("员工信息")
+
 
     def update_btn_clicked(self):
         print("update_btn_clicked")
@@ -152,6 +158,15 @@ class MainWindow(QtWidgets.QMainWindow):
 
         elif self.ui.update_com_box.currentText() == '楼栋信息':
             print("楼栋信息")
+
+        elif self.ui.update_com_box.currentText() == '员工信息':
+            print("员工信息")
+            self.update_staff = UpdateStaff()
+            self.update_staff.show()
+
+        elif self.ui.update_com_box.currentText() == '车位信息':
+            print("车位信息")
+
 
     def P_count_fee_btn_clicked(self):
         print("P_count_fee_btn_clicked")

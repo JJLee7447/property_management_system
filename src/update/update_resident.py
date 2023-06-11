@@ -1,6 +1,6 @@
 from src.db_config import db_connect
 from PyQt5 import QtWidgets
-from UI.update_resident_ui import Ui_update_resident
+from UI.update_ui.update_resident_ui import Ui_update_resident
 import sys
 
 class  UpdateResident(QtWidgets.QWidget):
@@ -9,7 +9,6 @@ class  UpdateResident(QtWidgets.QWidget):
         self.ui = Ui_update_resident()
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.update_resident_clicked)
-
 
     def update_resident_clicked(self):
         resident_id = self.ui.id_edit.text()

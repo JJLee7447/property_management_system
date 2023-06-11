@@ -13,19 +13,21 @@ class RegisterStaff(QtWidgets.QWidget):
 
     def register_staff_clicked(self):
         print("register_staff_clicked")
-        staff_name = self.ui.name_combox.currentText()
-        position = self.ui.position_editor.text()
-
+        staff_name = self.ui.name_editor.text()
+        position = self.ui.position_combox.currentText()
         values = [staff_name, position]
-        conn = db_connect()
-        cursor = conn.cursor()
-        sql = '''INSERT INTO property_staff (staff_name, position) VALUES (%s, %s);'''
-        cursor.execute(sql, values)
-        conn.commit()
-        conn.close()
+        try:
+            conn = db_connect()
+            cursor = conn.cursor()
+            sql = '''INSERT INTO property_staff (staff_name, position) VALUES (%s, %s);'''
+            cursor.execute(sql, values)
+            conn.commit()
+            conn.close()
+        except Exception as e:
+            print(e)
 
         print(staff_name, position)
-        self.close()
+        print('register_staff_success')
 
 
 if __name__ == "__main__":

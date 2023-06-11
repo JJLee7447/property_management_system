@@ -1,6 +1,6 @@
 from src.db_config import db_connect
 from PyQt5 import QtWidgets
-from UI.del_resident_ui import Ui_del_resident
+from UI.delete_ui.del_resident_ui import Ui_del_resident
 import sys
 
 

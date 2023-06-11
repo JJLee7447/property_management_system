@@ -22,14 +22,21 @@ def login_fuc(property_id, password):
     res = cursor.fetchone()
     if res:
         stored_property_id, position, stored_password = res
-        if password == stored_password:
+        if password == stored_password and position == '管理员':
             # 验证成功
             print("登录成功")
             cursor.close()
             conn.close()
             return True
             # 执行登录成功后的操作
-        else:
+        elif position != '管理员':
+            # 密码错误
+            print('只有管理员才能使用')
+            cursor.close()
+            conn.close()
+            return False
+            # 执行登录失败后的操作
+        elif password != stored_password:
             # 密码错误
             print("密码错误")
             cursor.close()
