@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_register_property_fees(object):
     def setupUi(self, register_property_fees):
         register_property_fees.setObjectName("register_property_fees")
-        register_property_fees.resize(569, 426)
+        register_property_fees.resize(569, 436)
         self.label = QtWidgets.QLabel(register_property_fees)
         self.label.setGeometry(QtCore.QRect(60, 60, 72, 15))
         self.label.setObjectName("label")
