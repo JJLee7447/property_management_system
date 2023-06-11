@@ -1,5 +1,7 @@
 from UI.register_ui.register_property_fees_ui import Ui_register_property_fees
 from PyQt5 import QtWidgets
+from datetime import datetime
+from PyQt5.QtCore import QDateTime
 from src.db_config import db_connect
 import sys
 
@@ -10,6 +12,10 @@ class RegisterPropertyFees(QtWidgets.QWidget):
         self.ui = Ui_register_property_fees()
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.register_btn_clicked)
+        current_datetime = QDateTime.currentDateTime()
+        self.ui.paid_dateEdit.setDateTime(current_datetime)
+        self.ui.year_lineEdit.setText(str(datetime.now().year))
+        self.ui.month_lineEdit.setText(str(datetime.now().month))
 
     def register_btn_clicked(self):
         print("register_btn_clicked")
