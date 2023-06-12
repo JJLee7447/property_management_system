@@ -12,6 +12,7 @@ from src.register.register_maintenance import RegisterMaintenance
 from src.register.register_parking_fees import RegisterParkingFees
 from src.register.register_property_fees import RegisterPropertyFees
 from src.delete.del_resident import DelResident
+from src.delete.del_staff import DelStaff
 from src.update.update_resident import UpdateResident
 from src.update.update_staff import UpdateStaff
 from src.update.update_building import UpdateBuilding
@@ -41,6 +42,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.update_staff = None
         self.update_building = None
         self.update_parking_space = None
+        self.del_staff = None
 
         self.ui.register_btn.clicked.connect(self.register_resident_clicked)
         self.ui.query_btn.clicked.connect(self.query_resident_clicked)
@@ -151,7 +153,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
         elif self.ui.del_com_box.currentText() == '员工信息':
             print("员工信息")
-
+            self.del_staff = DelStaff()
+            self.del_staff.show()
 
     def update_btn_clicked(self):
         print("update_btn_clicked")
