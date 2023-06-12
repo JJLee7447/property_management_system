@@ -17,6 +17,8 @@ class RegisterPropertyFees(QtWidgets.QWidget):
         self.ui.year_lineEdit.setText(str(datetime.now().year))
         self.ui.month_lineEdit.setText(str(datetime.now().month))
 
+        self.ui.paid_dateEdit.dateChanged.connect(self.update_year_month)
+
     def register_btn_clicked(self):
         print("register_btn_clicked")
         building_id = self.ui.building_id_lineEdit.text()
@@ -43,6 +45,12 @@ class RegisterPropertyFees(QtWidgets.QWidget):
 
         print(building_id, house_id, year, month, due_pay, paid, paid_date_mysql, staff_id)
         self.close()
+
+    def update_year_month(self, date):
+        year = date.year()
+        month = date.month()
+        self.ui.year_lineEdit.setText(str(year))
+        self.ui.month_lineEdit.setText(str(month))
 
 
 if __name__ == "__main__":
