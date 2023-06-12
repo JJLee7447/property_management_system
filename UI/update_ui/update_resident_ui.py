@@ -54,7 +54,7 @@ class Ui_update_resident(object):
 
     def retranslateUi(self, update_resident):
         _translate = QtCore.QCoreApplication.translate
-        update_resident.setWindowTitle(_translate("update_resident", "Form"))
+        update_resident.setWindowTitle(_translate("update_resident", "update_resident"))
         self.label_3.setText(_translate("update_resident", "employer"))
         self.label_2.setText(_translate("update_resident", "name"))
         self.label.setText(_translate("update_resident", "email"))

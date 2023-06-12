@@ -54,7 +54,7 @@ class Ui_p_count_pro_fee(object):
 
     def retranslateUi(self, p_count_pro_fee):
         _translate = QtCore.QCoreApplication.translate
-        p_count_pro_fee.setWindowTitle(_translate("p_count_pro_fee", "Form"))
+        p_count_pro_fee.setWindowTitle(_translate("p_count_pro_fee", "p_count_pro_fee"))
         self.label.setText(_translate("p_count_pro_fee", "年"))
         self.label_2.setText(_translate("p_count_pro_fee", "月"))
         self.label_3.setText(_translate("p_count_pro_fee", "应缴"))

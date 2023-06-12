@@ -48,7 +48,7 @@ class Ui_register_resident(object):
 
     def retranslateUi(self, register_resident):
         _translate = QtCore.QCoreApplication.translate
-        register_resident.setWindowTitle(_translate("register_resident", "Form"))
+        register_resident.setWindowTitle(_translate("register_resident", "register_resident"))
         self.label_4.setText(_translate("register_resident", "family_size"))
         self.label_3.setText(_translate("register_resident", "employer"))
         self.label_2.setText(_translate("register_resident", "name"))

@@ -42,7 +42,7 @@ class Ui_register_house(object):
 
     def retranslateUi(self, register_house):
         _translate = QtCore.QCoreApplication.translate
-        register_house.setWindowTitle(_translate("register_house", "Form"))
+        register_house.setWindowTitle(_translate("register_house", "register_house"))
         self.label.setText(_translate("register_house", "楼号"))
         self.label_2.setText(_translate("register_house", "面积"))
         self.label_3.setText(_translate("register_house", "住户编号"))

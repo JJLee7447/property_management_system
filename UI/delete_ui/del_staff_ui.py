@@ -36,7 +36,7 @@ class Ui_del_staff(object):
 
     def retranslateUi(self, del_staff):
         _translate = QtCore.QCoreApplication.translate
-        del_staff.setWindowTitle(_translate("del_staff", "Form"))
+        del_staff.setWindowTitle(_translate("del_staff", "del_staff"))
         self.label.setText(_translate("del_staff", "员工编号"))
         self.label_2.setText(_translate("del_staff", "员工姓名"))
         self.pushButton.setText(_translate("del_staff", "确定"))

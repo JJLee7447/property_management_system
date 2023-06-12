@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>367</width>
+    <width>499</width>
     <height>436</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>register_parking_fees</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">

@@ -54,7 +54,7 @@ class Ui_update_parking_space(object):
 
     def retranslateUi(self, update_parking_space):
         _translate = QtCore.QCoreApplication.translate
-        update_parking_space.setWindowTitle(_translate("update_parking_space", "Form"))
+        update_parking_space.setWindowTitle(_translate("update_parking_space", "update_parking_space"))
         self.label_2.setText(_translate("update_parking_space", "房号"))
         self.pushButton.setText(_translate("update_parking_space", "确定"))
         self.label.setText(_translate("update_parking_space", "楼号"))

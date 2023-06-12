@@ -36,7 +36,7 @@ class Ui_register_building(object):
 
     def retranslateUi(self, register_building):
         _translate = QtCore.QCoreApplication.translate
-        register_building.setWindowTitle(_translate("register_building", "Form"))
+        register_building.setWindowTitle(_translate("register_building", "register_building"))
         self.label.setText(_translate("register_building", "楼栋号"))
         self.label_2.setText(_translate("register_building", "管理员工ID"))
         self.pushButton.setText(_translate("register_building", "确定"))

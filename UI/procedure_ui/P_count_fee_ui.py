@@ -51,7 +51,7 @@ class Ui_P_count_fee(object):
 
     def retranslateUi(self, P_count_fee):
         _translate = QtCore.QCoreApplication.translate
-        P_count_fee.setWindowTitle(_translate("P_count_fee", "Form"))
+        P_count_fee.setWindowTitle(_translate("P_count_fee", "P_count_fee"))
         self.label.setText(_translate("P_count_fee", "楼号"))
         self.label_2.setText(_translate("P_count_fee", "房号"))
         self.pushButton.setText(_translate("P_count_fee", "确定"))

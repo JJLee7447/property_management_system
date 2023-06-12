@@ -30,7 +30,7 @@ class Ui_register_staff(object):
         self.position_combox.addItem("")
         self.position_combox.addItem("")
         self.pushButton = QtWidgets.QPushButton(register_staff)
-        self.pushButton.setGeometry(QtCore.QRect(100, 210, 93, 28))
+        self.pushButton.setGeometry(QtCore.QRect(140, 210, 93, 28))
         self.pushButton.setObjectName("pushButton")
 
         self.retranslateUi(register_staff)
@@ -38,7 +38,7 @@ class Ui_register_staff(object):
 
     def retranslateUi(self, register_staff):
         _translate = QtCore.QCoreApplication.translate
-        register_staff.setWindowTitle(_translate("register_staff", "Form"))
+        register_staff.setWindowTitle(_translate("register_staff", "register_staff"))
         self.label.setText(_translate("register_staff", "职位"))
         self.label_2.setText(_translate("register_staff", "姓名"))
         self.position_combox.setItemText(0, _translate("register_staff", "普通员工"))

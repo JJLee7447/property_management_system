@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_register_parking_fees(object):
     def setupUi(self, register_parking_fees):
         register_parking_fees.setObjectName("register_parking_fees")
-        register_parking_fees.resize(367, 436)
+        register_parking_fees.resize(499, 436)
         self.label = QtWidgets.QLabel(register_parking_fees)
         self.label.setGeometry(QtCore.QRect(50, 60, 72, 15))
         self.label.setObjectName("label")
@@ -68,7 +68,7 @@ class Ui_register_parking_fees(object):
 
     def retranslateUi(self, register_parking_fees):
         _translate = QtCore.QCoreApplication.translate
-        register_parking_fees.setWindowTitle(_translate("register_parking_fees", "Form"))
+        register_parking_fees.setWindowTitle(_translate("register_parking_fees", "register_parking_fees"))
         self.label.setText(_translate("register_parking_fees", "车位号"))
         self.label_2.setText(_translate("register_parking_fees", "年"))
         self.label_3.setText(_translate("register_parking_fees", "月"))

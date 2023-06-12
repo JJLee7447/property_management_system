@@ -12,15 +12,6 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_login(object):
-    def __init__(self):
-        self.sig_up_btn = None
-        self.login_btn = None
-        self.password_editor = None
-        self.id_editor = None
-        self.password_label = None
-        self.id_label = None
-        self.login_label = None
-
     def setupUi(self, login):
         login.setObjectName("login")
         login.resize(400, 300)
@@ -52,7 +43,7 @@ class Ui_login(object):
 
     def retranslateUi(self, login):
         _translate = QtCore.QCoreApplication.translate
-        login.setWindowTitle(_translate("login", "Form"))
+        login.setWindowTitle(_translate("login", "Login"))
         self.login_label.setText(_translate("login", "LOGIN"))
         self.id_label.setText(_translate("login", "property_id:"))
         self.password_label.setText(_translate("login", "password:"))

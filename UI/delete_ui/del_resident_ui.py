@@ -36,7 +36,7 @@ class Ui_del_resident(object):
 
     def retranslateUi(self, del_resident):
         _translate = QtCore.QCoreApplication.translate
-        del_resident.setWindowTitle(_translate("del_resident", "Form"))
+        del_resident.setWindowTitle(_translate("del_resident", "del_resident"))
         self.resident_id_label.setText(_translate("del_resident", "resident_id"))
         self.name_label.setText(_translate("del_resident", "name"))
         self.pushButton.setText(_translate("del_resident", "确定"))

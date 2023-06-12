@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_update_building(object):
     def setupUi(self, update_building):
         update_building.setObjectName("update_building")
-        update_building.resize(400, 300)
+        update_building.resize(397, 300)
         self.pushButton = QtWidgets.QPushButton(update_building)
         self.pushButton.setGeometry(QtCore.QRect(160, 200, 93, 28))
         self.pushButton.setObjectName("pushButton")
@@ -36,7 +36,7 @@ class Ui_update_building(object):
 
     def retranslateUi(self, update_building):
         _translate = QtCore.QCoreApplication.translate
-        update_building.setWindowTitle(_translate("update_building", "Form"))
+        update_building.setWindowTitle(_translate("update_building", "update_building"))
         self.pushButton.setText(_translate("update_building", "确定"))
         self.label_2.setText(_translate("update_building", "管理员工ID"))
         self.label.setText(_translate("update_building", "楼栋号"))

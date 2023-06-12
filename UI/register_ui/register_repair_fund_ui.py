@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_register_repair_fund(object):
     def setupUi(self, register_repair_fund):
         register_repair_fund.setObjectName("register_repair_fund")
-        register_repair_fund.resize(400, 300)
+        register_repair_fund.resize(400, 383)
         self.label = QtWidgets.QLabel(register_repair_fund)
         self.label.setGeometry(QtCore.QRect(50, 100, 72, 15))
         self.label.setObjectName("label")
@@ -36,7 +36,7 @@ class Ui_register_repair_fund(object):
 
     def retranslateUi(self, register_repair_fund):
         _translate = QtCore.QCoreApplication.translate
-        register_repair_fund.setWindowTitle(_translate("register_repair_fund", "Form"))
+        register_repair_fund.setWindowTitle(_translate("register_repair_fund", "register_repair_fund"))
         self.label.setText(_translate("register_repair_fund", "balance"))
         self.label_2.setText(_translate("register_repair_fund", "account_id"))
         self.pushButton.setText(_translate("register_repair_fund", "确定"))

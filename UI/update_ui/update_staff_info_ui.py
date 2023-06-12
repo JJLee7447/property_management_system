@@ -50,7 +50,7 @@ class Ui_update_staff_info(object):
 
     def retranslateUi(self, update_staff_info):
         _translate = QtCore.QCoreApplication.translate
-        update_staff_info.setWindowTitle(_translate("update_staff_info", "Form"))
+        update_staff_info.setWindowTitle(_translate("update_staff_info", "update_staff_info"))
         self.label_2.setText(_translate("update_staff_info", "姓名"))
         self.position_combox.setItemText(0, _translate("update_staff_info", "普通员工"))
         self.position_combox.setItemText(1, _translate("update_staff_info", "管理员"))

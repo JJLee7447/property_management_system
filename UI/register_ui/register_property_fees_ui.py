@@ -74,7 +74,7 @@ class Ui_register_property_fees(object):
 
     def retranslateUi(self, register_property_fees):
         _translate = QtCore.QCoreApplication.translate
-        register_property_fees.setWindowTitle(_translate("register_property_fees", "Form"))
+        register_property_fees.setWindowTitle(_translate("register_property_fees", "register_property_fees"))
         self.label.setText(_translate("register_property_fees", "年"))
         self.label_2.setText(_translate("register_property_fees", "月"))
         self.label_3.setText(_translate("register_property_fees", "应付物业费"))

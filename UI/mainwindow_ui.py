@@ -106,7 +106,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "物业管理系统"))
         self.register_btn.setText(_translate("MainWindow", "登记"))
         self.register_com_box.setItemText(0, _translate("MainWindow", "住户信息"))
         self.register_com_box.setItemText(1, _translate("MainWindow", "楼栋信息"))

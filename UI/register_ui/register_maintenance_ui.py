@@ -73,7 +73,7 @@ class Ui_register_maintenance(object):
 
     def retranslateUi(self, register_maintenance):
         _translate = QtCore.QCoreApplication.translate
-        register_maintenance.setWindowTitle(_translate("register_maintenance", "Form"))
+        register_maintenance.setWindowTitle(_translate("register_maintenance", "register_miantenance"))
         self.label.setText(_translate("register_maintenance", "住户编号"))
         self.label_2.setText(_translate("register_maintenance", "维修描述"))
         self.label_3.setText(_translate("register_maintenance", "上报时间"))
