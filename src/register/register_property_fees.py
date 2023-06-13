@@ -41,7 +41,6 @@ class RegisterPropertyFees(QtWidgets.QWidget):
             conn.close()
         except Exception as e:
             print(e)
-            print("Error: Duplicate entry for key 'PRIMARY'")
 
         print(building_id, house_id, year, month, due_pay, paid, paid_date_mysql, staff_id)
         self.close()

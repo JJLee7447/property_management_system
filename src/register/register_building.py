@@ -18,13 +18,17 @@ class RegisterBuilding(QtWidgets.QWidget):
         values = [building_id, mag_staff]
         conn = db_connect()
         cursor = conn.cursor()
-        sql = '''INSERT INTO buildings (build_num, property_id) VALUES (%s, %s);'''
-        cursor.execute(sql, values)
-        conn.commit()
-        conn.close()
+        sql = '''INSERT INTO buildings (building_id, property_id) VALUES (%s, %s);'''
+        try:
+            cursor.execute(sql, values)
+            conn.commit()
+            conn.close()
 
-        print(building_id, mag_staff)
-        self.close()
+        except Exception as e:
+            print(e)
+
+        else:
+            print('register_building_success')
 
 
 if __name__ == "__main__":

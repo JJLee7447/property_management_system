@@ -1,6 +1,7 @@
 from PyQt5 import QtWidgets
 from UI.register_ui.register_maintenance_ui import Ui_register_maintenance
 import sys
+from PyQt5.QtCore import QDateTime
 from src.db_config import db_connect
 from datetime import datetime
 
@@ -9,6 +10,10 @@ class RegisterMaintenance(QtWidgets.QWidget):
         super().__init__()
         self.ui = Ui_register_maintenance()
         self.ui.setupUi(self)
+        current_date = QDateTime.currentDateTime()
+        self.ui.report_dateEdit.setDateTime(current_date)
+        self.ui.repair_dateEdit.setDateTime(current_date)
+
         self.ui.pushButton.clicked.connect(self.register_maintenance_clicked)
 
     def register_maintenance_clicked(self):
@@ -46,12 +51,10 @@ class RegisterMaintenance(QtWidgets.QWidget):
             print("An error occurred while inserting into the maintenance table:")
             print(e)
             conn.rollback()
-
-        cursor.close()
-        conn.close()
-
-        print(values)
-        self.close()
+        else:
+            print("register_maintenance_success")
+            cursor.close()
+            conn.close()
 
 
 if __name__ == "__main__":

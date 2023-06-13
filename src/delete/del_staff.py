@@ -13,6 +13,9 @@ class DelStaff(QtWidgets.QWidget):
     def delete_staff_clicked(self):
         property_id = self.ui.staff_id_lineEdit.text()
         staff_name = self.ui.staff_id_lineEdit.text()
+        if property_id == '' or staff_name == '':
+            print('property_id or staff_name are empty')
+            return
         values = [property_id, staff_name]
         conn = db_connect()
         cursor = conn.cursor()
@@ -26,7 +29,7 @@ class DelStaff(QtWidgets.QWidget):
 
         finally:
             conn.close()
-            self.close()
+            print('staff_delete_success')
 
 
 if __name__ == "__main__":

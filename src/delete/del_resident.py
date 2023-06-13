@@ -15,15 +15,21 @@ class DelResident(QtWidgets.QWidget):
         print("del_resident_clicked")
         resident_id = self.ui.lineEdit.text()
         name = self.ui.lineEdit_2.text()
+        if resident_id == '' or name == '':
+            print('resident_id or name are empty')
+            return
         values = [resident_id, name]
         conn = db_connect()
         cursor = conn.cursor()
         sql = '''DELETE FROM residents WHERE resident_id = %s or owner_name = %s;'''
-        cursor.execute(sql, values)
-        conn.commit()
-        conn.close()
+        try:
+            cursor.execute(sql, values)
+            conn.commit()
+            conn.close()
 
-        self.close()
+        except Exception as e:
+            print(e)
+        print('del_resident_success')
 
 
 if __name__ == "__main__":

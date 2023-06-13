@@ -19,12 +19,16 @@ class RegisterHouse(QtWidgets.QWidget):
         conn = db_connect()
         cursor = conn.cursor()
         sql = '''INSERT INTO house (building_id, area, resident_id) VALUES (%s, %s, %s);'''
-        cursor.execute(sql, values)
-        conn.commit()
-        conn.close()
+        try:
+            cursor.execute(sql, values)
+            conn.commit()
+            conn.close()
 
-        print(building_id, area, resident_id)
-        self.close()
+        except Exception as e:
+            print(e)
+
+        else:
+            print('register_house_success')
 
 
 if __name__ == "__main__":

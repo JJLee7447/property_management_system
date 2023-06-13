@@ -14,6 +14,9 @@ class RegisterStaff(QtWidgets.QWidget):
     def register_staff_clicked(self):
         print("register_staff_clicked")
         staff_name = self.ui.name_editor.text()
+        if staff_name == '':
+            print('staff_name is empty')
+            return
         position = self.ui.position_combox.currentText()
         values = [staff_name, position]
         try:

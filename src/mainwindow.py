@@ -44,7 +44,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self.update_parking_space = None
         self.del_staff = None
 
-
         self.ui.register_btn.clicked.connect(self.register_resident_clicked)
         self.ui.query_btn.clicked.connect(self.query_resident_clicked)
         self.ui.clear_btn.clicked.connect(self.clear_btn_clicked)
