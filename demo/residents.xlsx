@@ -1,0 +1,7 @@
+resident_id,email,owner_name,employer,family_size
+1,john@example.com,John Doe,ABC Company,4
+2,JJ@example.com,Jane Smith,ABC Company,4
+3,bob@example.com,Bob Johnson,DEF Industries,3
+5,tom@example.com,Tom Wilson,JKL Ltd,2
+6,email.com,ddd,ddd,5
+7,gser,sgdes,rthsrh,4

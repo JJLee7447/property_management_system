@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_register_parking_fees(object):
     def setupUi(self, register_parking_fees):
         register_parking_fees.setObjectName("register_parking_fees")
-        register_parking_fees.resize(499, 436)
+        register_parking_fees.resize(499, 482)
         self.label = QtWidgets.QLabel(register_parking_fees)
         self.label.setGeometry(QtCore.QRect(50, 60, 72, 15))
         self.label.setObjectName("label")
@@ -36,9 +36,6 @@ class Ui_register_parking_fees(object):
         self.label_7 = QtWidgets.QLabel(register_parking_fees)
         self.label_7.setGeometry(QtCore.QRect(50, 310, 72, 15))
         self.label_7.setObjectName("label_7")
-        self.parking_id_lineEdit = QtWidgets.QLineEdit(register_parking_fees)
-        self.parking_id_lineEdit.setGeometry(QtCore.QRect(170, 50, 113, 21))
-        self.parking_id_lineEdit.setObjectName("parking_id_lineEdit")
         self.year_lineEdit = QtWidgets.QLineEdit(register_parking_fees)
         self.year_lineEdit.setGeometry(QtCore.QRect(170, 90, 113, 21))
         self.year_lineEdit.setReadOnly(True)
@@ -60,8 +57,18 @@ class Ui_register_parking_fees(object):
         self.paid_dateEdit.setGeometry(QtCore.QRect(170, 270, 110, 22))
         self.paid_dateEdit.setObjectName("paid_dateEdit")
         self.pushButton = QtWidgets.QPushButton(register_parking_fees)
-        self.pushButton.setGeometry(QtCore.QRect(170, 360, 111, 28))
+        self.pushButton.setGeometry(QtCore.QRect(170, 420, 111, 28))
         self.pushButton.setObjectName("pushButton")
+        self.label_9 = QtWidgets.QLabel(register_parking_fees)
+        self.label_9.setGeometry(QtCore.QRect(50, 360, 72, 15))
+        self.label_9.setObjectName("label_9")
+        self.is_paid_radioButton = QtWidgets.QRadioButton(register_parking_fees)
+        self.is_paid_radioButton.setGeometry(QtCore.QRect(170, 360, 115, 19))
+        self.is_paid_radioButton.setChecked(True)
+        self.is_paid_radioButton.setObjectName("is_paid_radioButton")
+        self.parking_id_comboBox = QtWidgets.QComboBox(register_parking_fees)
+        self.parking_id_comboBox.setGeometry(QtCore.QRect(170, 50, 111, 22))
+        self.parking_id_comboBox.setObjectName("parking_id_comboBox")
 
         self.retranslateUi(register_parking_fees)
         QtCore.QMetaObject.connectSlotsByName(register_parking_fees)
@@ -77,6 +84,8 @@ class Ui_register_parking_fees(object):
         self.label_6.setText(_translate("register_parking_fees", "付款日期"))
         self.label_7.setText(_translate("register_parking_fees", "员工_id"))
         self.pushButton.setText(_translate("register_parking_fees", "确定"))
+        self.label_9.setText(_translate("register_parking_fees", "是否缴费"))
+        self.is_paid_radioButton.setText(_translate("register_parking_fees", "是"))
 
 
 if __name__ == "__main__":

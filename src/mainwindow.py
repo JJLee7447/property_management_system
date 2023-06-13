@@ -20,6 +20,7 @@ from src.update.update_parking_space import UpdateParkingSpace
 import src.query_all as query_all
 from src.procedure.P_count_fee import P_count_fee
 from src.procedure.p_count_pro_fee import P_count_pro_fee
+from src.reminder_fee import ReminderFee
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -43,6 +44,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.update_building = None
         self.update_parking_space = None
         self.del_staff = None
+        self.reminder_fee = None
 
         self.ui.register_btn.clicked.connect(self.register_resident_clicked)
         self.ui.query_btn.clicked.connect(self.query_resident_clicked)
@@ -53,6 +55,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.sta_pro_fee_btn.clicked.connect(self.P_count_pro_fee_btn_clicked)
         self.ui.sum_parking_space_btn.clicked.connect(self.sum_parking_space_btn_clicked)
         self.ui.sum_resident_btn.clicked.connect(self.sum_resident_btn_clicked)
+        self.ui.reminder_fee_btn.clicked.connect(self.reminder_fee_btn_clicked)
 
     def clear_btn_clicked(self):
         try:
@@ -227,6 +230,11 @@ class MainWindow(QtWidgets.QMainWindow):
         except Exception as e:
             print(e)
             QtWidgets.QMessageBox.warning(self, "错误", "查询失败", QtWidgets.QMessageBox.Yes)
+
+    def reminder_fee_btn_clicked(self):
+        print("reminder_fee_btn_clicked")
+        self.reminder_fee = ReminderFee()
+        self.reminder_fee.show()
 
 
 if __name__ == "__main__":

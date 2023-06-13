@@ -1,7 +1,7 @@
 from src.db_config import db_connect
 from PyQt5 import QtWidgets
 from UI.procedure_ui.p_count_pro_fee_ui import Ui_p_count_pro_fee
-
+from datetime import datetime
 
 class P_count_pro_fee(QtWidgets.QWidget):
     def __init__(self):
@@ -9,6 +9,8 @@ class P_count_pro_fee(QtWidgets.QWidget):
         self.ui = Ui_p_count_pro_fee()
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.query_btn_clicked)
+        self.ui.year_lineEdit.setText(str(datetime.now().year))
+        self.ui.month_lineEdit.setText(str(datetime.now().month))
 
     def query_btn_clicked(self):
         try:
