@@ -13,16 +13,6 @@
   <property name="windowTitle">
    <string>del_resident</string>
   </property>
-  <widget class="QLineEdit" name="lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>40</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="resident_id_label">
    <property name="geometry">
     <rect>
@@ -58,6 +48,9 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
@@ -70,6 +63,16 @@
    </property>
    <property name="text">
     <string>确定</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="resident_id_comboBox">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>40</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
    </property>
   </widget>
  </widget>
