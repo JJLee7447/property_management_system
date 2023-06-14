@@ -18,6 +18,7 @@ from src.update.update_staff import UpdateStaff
 from src.update.update_building import UpdateBuilding
 from src.update.update_parking_space import UpdateParkingSpace
 from src.update.update_property_fee import UpdatePropertyFee
+from src.update.upadte_repair_fund import UpdateRepairFund
 import src.query_all as query_all
 from src.procedure.P_count_fee import P_count_fee
 from src.procedure.p_count_pro_fee import P_count_pro_fee
@@ -47,6 +48,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.del_staff = None
         self.reminder_fee = None
         self.UpdatePropertyFee = None
+        self.update_repair_fund = None
 
         self.ui.register_btn.clicked.connect(self.register_resident_clicked)
         self.ui.query_btn.clicked.connect(self.query_resident_clicked)
@@ -61,12 +63,9 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def clear_btn_clicked(self):
         try:
-            model = self.ui.tableView.model()
-            model.clear()
-            model.setHorizontalHeaderLabels([''])
-            self.ui.tableView.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
-            self.ui.tableView.verticalHeader().setSectionResizeMode(QHeaderView.Stretch)
-
+            # 使用QStandardItemModel 清除表格内容
+            model = QtGui.QStandardItemModel()
+            self.ui.tableView.setModel(model)
         except Exception as e:
             print(e)
 
@@ -188,6 +187,16 @@ class MainWindow(QtWidgets.QMainWindow):
 
             self.UpdatePropertyFee = UpdatePropertyFee()
             self.UpdatePropertyFee.show()
+
+        elif self.ui.update_com_box.currentText() == '停车费信息':
+            print("停车费信息")
+
+
+        elif self.ui.update_com_box.currentText() == '维修基金':
+            print("维修基金")
+            self.update_repair_fund = UpdateRepairFund()
+            self.update_repair_fund.show()
+
 
     def P_count_fee_btn_clicked(self):
         print("P_count_fee_btn_clicked")

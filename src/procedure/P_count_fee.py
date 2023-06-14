@@ -40,7 +40,7 @@ class P_count_fee(QtWidgets.QWidget):
             building_id = self.ui.building_id_comboBox.currentText()
             house_id = self.ui.house_id_comboBox.currentText()
             print(building_id, house_id)
-            query = "CALL GetPropertyInfo(%s, %s, @p_due_parking_fee, @p_due_property_fee)"
+            query = "CALL Get_Property_fee_Parking_fee_Info(%s, %s, @p_due_parking_fee, @p_due_property_fee)"
             cursor.execute(query, (building_id, house_id))
             cursor.execute("SELECT @p_due_parking_fee, @p_due_property_fee")
             result = cursor.fetchone()

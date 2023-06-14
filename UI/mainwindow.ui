@@ -73,11 +73,6 @@
     </item>
     <item>
      <property name="text">
-      <string>维修基金</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
       <string>员工信息</string>
      </property>
     </item>
@@ -178,6 +173,11 @@
       <string>车位信息</string>
      </property>
     </item>
+    <item>
+     <property name="text">
+      <string>维修基金</string>
+     </property>
+    </item>
    </widget>
    <widget class="QComboBox" name="del_com_box">
     <property name="geometry">
@@ -191,11 +191,6 @@
     <item>
      <property name="text">
       <string>住户信息</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>车位信息</string>
      </property>
     </item>
     <item>
