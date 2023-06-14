@@ -160,6 +160,11 @@
     </item>
     <item>
      <property name="text">
+      <string>物业费信息</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
       <string>员工信息</string>
      </property>
     </item>

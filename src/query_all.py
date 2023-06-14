@@ -191,7 +191,7 @@ def query_parking_fees(self, content, cursor):
             # 创建一个模型
             model = QtGui.QStandardItemModel()
             # 设置属性名
-            model.setHorizontalHeaderLabels(['停车费编号', '车位编号', '年', '月', '应缴费金额', '实缴费金额', '缴费日期', '员工编号'])
+            model.setHorizontalHeaderLabels(['停车费编号', '车位编号', '年', '月', '应缴费金额', '实缴费金额', '缴费日期', '员工编号', '是否缴费'])
             # 将结果添加到模型中
             for row in results:
                 row_items = [QtGui.QStandardItem(str(item)) for item in row]
@@ -211,7 +211,7 @@ def query_parking_fees(self, content, cursor):
             # 创建一个模型
             model = QtGui.QStandardItemModel()
             # 设置属性名
-            model.setHorizontalHeaderLabels(['停车费编号', '车位编号', '年', '月', '应缴费金额', '实缴费金额', '缴费日期', '员工编号'])
+            model.setHorizontalHeaderLabels(['停车费编号', '车位编号', '年', '月', '应缴费金额', '实缴费金额', '缴费日期', '员工编号', '是否缴费'])
             # 将结果添加到模型中
             for row in results:
                 row_items = [QtGui.QStandardItem(str(item)) for item in row]
@@ -255,7 +255,7 @@ def query_parking_spaces(self, content, cursor):
             # 创建一个模型
             model = QtGui.QStandardItemModel()
             # 设置属性名
-            model.setHorizontalHeaderLabels(['车位编号', '楼栋编号', '房间编号', '车牌号码', '停车费'])
+            model.setHorizontalHeaderLabels(['车位编号', '楼栋编号', '房间编号', '车牌号码', '停车费', '是否缴费'])
             # 将结果添加到模型中
             for row in results:
                 row_items = [QtGui.QStandardItem(str(item)) for item in row]
@@ -279,7 +279,7 @@ def query_property_fees(self, content, cursor):
             # 创建一个模型
             model = QtGui.QStandardItemModel()
             # 设置属性名
-            model.setHorizontalHeaderLabels(['物业费编号', '年', '月', '应缴费金额', '实缴费金额', '缴费日期', '员工编号', '楼栋编号', '房间编号'])
+            model.setHorizontalHeaderLabels(['物业费编号', '年', '月', '应缴费金额', '实缴费金额', '缴费日期', '员工编号', '楼栋编号', '房间编号', '是否缴费'])
             # 将结果添加到模型中
             for row in results:
                 row_items = [QtGui.QStandardItem(str(item)) for item in row]
