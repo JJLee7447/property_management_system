@@ -45,9 +45,9 @@ class Ui_update_resident(object):
         self.label_5 = QtWidgets.QLabel(update_resident)
         self.label_5.setGeometry(QtCore.QRect(50, 50, 101, 16))
         self.label_5.setObjectName("label_5")
-        self.id_edit = QtWidgets.QLineEdit(update_resident)
-        self.id_edit.setGeometry(QtCore.QRect(180, 50, 113, 21))
-        self.id_edit.setObjectName("id_edit")
+        self.resident_id_comboBox = QtWidgets.QComboBox(update_resident)
+        self.resident_id_comboBox.setGeometry(QtCore.QRect(180, 50, 111, 22))
+        self.resident_id_comboBox.setObjectName("resident_id_comboBox")
 
         self.retranslateUi(update_resident)
         QtCore.QMetaObject.connectSlotsByName(update_resident)
