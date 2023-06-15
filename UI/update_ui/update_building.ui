@@ -39,16 +39,6 @@
     <string>管理员工ID</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="building_id_lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>160</x>
-     <y>60</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="staff_id_lineEdit">
    <property name="geometry">
     <rect>
@@ -70,6 +60,16 @@
    </property>
    <property name="text">
     <string>楼栋号</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="building_id_comboBox">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>60</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
    </property>
   </widget>
  </widget>
