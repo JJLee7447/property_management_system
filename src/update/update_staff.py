@@ -20,12 +20,16 @@ class UpdateStaff(QtWidgets.QWidget):
 
         conn = db_connect()
         cursor = conn.cursor()
-        sql = '''UPDATE property_staff SET staff_name = %s, position = %s ,pass_word = %s where property_id = %s;'''
-        cursor.execute(sql, values)
-        conn.commit()
-        conn.close()
+        try:
+            sql = '''UPDATE property_staff SET staff_name = %s, position = %s ,pass_word = %s where property_id = %s;'''
+            cursor.execute(sql, values)
+            conn.commit()
+            conn.close()
+        except Exception as e:
+            print(e)
+        else:
+            print('update_staff_info_success')
 
-        self.close()
 
 
 if __name__ == "__main__":

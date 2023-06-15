@@ -186,15 +186,18 @@ class MainWindow(QtWidgets.QMainWindow):
 
         elif self.ui.update_com_box.currentText() == '物业费信息':
             print("物业费信息")
-
-            self.UpdatePropertyFee = UpdatePropertyFee()
-            self.UpdatePropertyFee.show()
-
+            try:
+                self.UpdatePropertyFee = UpdatePropertyFee()
+                self.UpdatePropertyFee.show()
+            except Exception as e:
+                print(e)
         elif self.ui.update_com_box.currentText() == '停车费信息':
             print("停车费信息")
-            self.update_parking_fee = UpdateParkingFee()
-            self.update_parking_fee.show()
-
+            try:
+                self.update_parking_fee = UpdateParkingFee()
+                self.update_parking_fee.show()
+            except Exception as e:
+                print(e)
         elif self.ui.update_com_box.currentText() == '维修基金':
             print("维修基金")
             self.update_repair_fund = UpdateRepairFund()

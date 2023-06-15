@@ -35,12 +35,21 @@ class UpdatePropertyFee(QtWidgets.QWidget):
         self.ui.month_lineEdit.setText(QtCore.QDateTime.currentDateTime().toString("MM"))
         self.ui.due_payment_lineEdit.setReadOnly(True)
         year, month = self.ui.year_lineEdit.text(), self.ui.month_lineEdit.text()
-
-        self.ui.house_id_comboBox.addItems([str(i[0]) for i in NotPaidHouseId_BuildingId(year, month)])
-        self.ui.building_id_comboBox.addItems([str(i[1]) for i in NotPaidHouseId_BuildingId(year, month)])
-        building_id, house_id = self.ui.building_id_comboBox.currentText(), self.ui.house_id_comboBox.currentText()
-        due_payment = Due_paid_Fee(year, month, building_id, house_id)
-        self.ui.due_payment_lineEdit.setText(str(due_payment[0][0]))
+        if NotPaidHouseId_BuildingId(year,month):
+            self.ui.house_id_comboBox.addItems([str(i[0]) for i in NotPaidHouseId_BuildingId(year, month)])
+            self.ui.building_id_comboBox.addItems([str(i[1]) for i in NotPaidHouseId_BuildingId(year, month)])
+            building_id, house_id = self.ui.building_id_comboBox.currentText(), self.ui.house_id_comboBox.currentText()
+            due_payment = Due_paid_Fee(year, month, building_id, house_id)
+            self.ui.due_payment_lineEdit.setText(str(due_payment[0][0]))
+        else:
+            self.ui.house_id_comboBox.addItem("无")
+            self.ui.building_id_comboBox.addItem("无")
+            self.ui.due_payment_lineEdit.setText("无")
+        # self.ui.house_id_comboBox.addItems([str(i[0]) for i in NotPaidHouseId_BuildingId(year, month)])
+        # self.ui.building_id_comboBox.addItems([str(i[1]) for i in NotPaidHouseId_BuildingId(year, month)])
+        # building_id, house_id = self.ui.building_id_comboBox.currentText(), self.ui.house_id_comboBox.currentText()
+        # due_payment = Due_paid_Fee(year, month, building_id, house_id)
+        # self.ui.due_payment_lineEdit.setText(str(due_payment[0][0]))
 
         self.ui.pushButton.clicked.connect(self.update_property_fee)
         self.ui.paid_dateEdit.dateTimeChanged.connect(self.update_year_month)

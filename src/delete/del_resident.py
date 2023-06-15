@@ -37,7 +37,7 @@ class DelResident(QtWidgets.QWidget):
         values = [resident_id, name]
         conn = db_connect()
         cursor = conn.cursor()
-        sql = '''DELETE FROM residents WHERE resident_id = %s or owner_name = %s;'''
+        sql = '''DELETE FROM residents WHERE resident_id = %s and owner_name = %s;'''
         try:
             cursor.execute(sql, values)
             conn.commit()

@@ -40,9 +40,6 @@ class  RegisterResident(QtWidgets.QWidget):
             conn.commit()
             conn.close()
         print('commit success')
-        print(email, name, employer, family_size)
-        self.close()
-
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

@@ -18,6 +18,18 @@ def GetBuildingId():
     except Exception as e:
         print(e)
 
+def GetHouseId(building_id):
+    conn = db_connect()
+    cursor = conn.cursor()
+    sql = '''select house_id from build_house_resident where building_id = %s;'''
+    try:
+        cursor.execute(sql, (building_id,))
+        result = cursor.fetchall()
+        print(result)
+        return result
+    except Exception as e:
+        print(e)
+
 
 class RegisterPropertyFees(QtWidgets.QWidget):
     def __init__(self):
@@ -30,6 +42,8 @@ class RegisterPropertyFees(QtWidgets.QWidget):
         self.ui.year_lineEdit.setText(str(datetime.now().year))
         self.ui.month_lineEdit.setText(str(datetime.now().month))
         self.ui.building_id_comboBox.addItems([str(i[0]) for i in GetBuildingId()])
+        building_id = self.ui.building_id_comboBox.currentText()
+        self.ui.house_id_comboBox.addItems([str(i[0]) for i in GetHouseId(building_id)])
 
         self.ui.building_id_comboBox.currentIndexChanged.connect(self.update_house_id)
         self.ui.building_id_comboBox.currentIndexChanged.connect(self.update_staff_id)
@@ -75,6 +89,7 @@ class RegisterPropertyFees(QtWidgets.QWidget):
 
     def update_house_id(self):
         building_id = self.ui.building_id_comboBox.currentText()
+        self.ui.house_id_comboBox.clear()
         conn = db_connect()
         cursor = conn.cursor()
         sql = '''select house_id from house where building_id=%s;'''
