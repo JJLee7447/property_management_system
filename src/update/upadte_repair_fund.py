@@ -11,6 +11,7 @@ class UpdateRepairFund(QtWidgets.QWidget):
         self.ui = Ui_update_repair_fund()
         self.ui.setupUi(self)
         self.ui.yes_btn.clicked.connect(self.update_btn_clicked)
+        self.ui.yes_btn.clicked.connect(self.new_btn_clicked)
         self.ui.new_btn.clicked.connect(self.new_btn_clicked)
 
     def update_btn_clicked(self):

@@ -16,7 +16,7 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>70</x>
      <y>70</y>
      <width>72</width>
      <height>15</height>
@@ -49,10 +49,10 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>70</x>
      <y>120</y>
-     <width>72</width>
-     <height>15</height>
+     <width>41</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
@@ -73,26 +73,13 @@
    <property name="geometry">
     <rect>
      <x>140</x>
-     <y>250</y>
+     <y>260</y>
      <width>93</width>
      <height>28</height>
     </rect>
    </property>
    <property name="text">
     <string>确定</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>170</y>
-     <width>72</width>
-     <height>15</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>password</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="password_lineEdit">
@@ -104,12 +91,18 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string>输入密码</string>
+   </property>
   </widget>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>20</y>
+     <y>30</y>
      <width>21</width>
      <height>16</height>
     </rect>
@@ -118,14 +111,30 @@
     <string>id</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="staff_id_lineEdit">
+  <widget class="QComboBox" name="staff_id_cbox">
    <property name="geometry">
     <rect>
      <x>140</x>
-     <y>20</y>
-     <width>113</width>
-     <height>21</height>
+     <y>30</y>
+     <width>111</width>
+     <height>22</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="password_lineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>220</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string>再次输入密码</string>
    </property>
   </widget>
  </widget>

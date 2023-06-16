@@ -15,6 +15,8 @@ class Ui_login(object):
     def setupUi(self, login):
         login.setObjectName("login")
         login.resize(908, 759)
+        login.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        login.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.label_2 = QtWidgets.QLabel(login)
         self.label_2.setGeometry(QtCore.QRect(430, 120, 340, 490))
         self.label_2.setStyleSheet("background-color: rgb(255, 255, 255);\n"

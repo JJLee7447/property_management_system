@@ -52,16 +52,6 @@
     <string>住户编号</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="building_id">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>40</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="area">
    <property name="geometry">
     <rect>
@@ -93,6 +83,16 @@
    </property>
    <property name="text">
     <string>确定</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="building_id_comboBox">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>40</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
    </property>
   </widget>
  </widget>

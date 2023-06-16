@@ -14,8 +14,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_login(object):
     def setupUi(self, login):
         login.setObjectName("login")
-        login.setWindowFlags(QtCore.Qt.FramelessWindowHint)
-        login.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        # login.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        # login.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         login.resize(824, 628)
         font = QtGui.QFont()
         font.setPointSize(10)
