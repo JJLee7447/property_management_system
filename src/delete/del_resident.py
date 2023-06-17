@@ -47,6 +47,7 @@ class DelResident(QtWidgets.QWidget):
             print(e)
         else:
             print('del_resident_success')
+            self.ui.resident_id_comboBox.addItems([str(i[0]) for i in GetResidentId()])
 
 
     def update_resident_name(self):

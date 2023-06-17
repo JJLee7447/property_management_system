@@ -5,6 +5,7 @@ from PyQt5.QtCore import QDateTime
 from src.db_config import db_connect
 from datetime import datetime
 
+
 class RegisterMaintenance(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()

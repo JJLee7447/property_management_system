@@ -58,6 +58,7 @@ def query_building(self, content, cursor):
             # 将查询结果表格化形式给 tableView
             # 创建一个模型
             model = QtGui.QStandardItemModel()
+            # model.setEditStrategy(QtGui.QSqlTableModel.OnFieldChange)
             # 设置属性名
             model.setHorizontalHeaderLabels(['楼栋编号', '负责人id'])
             # 将结果添加到模型中

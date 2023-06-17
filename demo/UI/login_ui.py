@@ -164,7 +164,6 @@ class Ui_login(object):
         self.lineEdit_4.setPlaceholderText(_translate("login", "设置密码："))
         self.lineEdit_5.setPlaceholderText(_translate("login", "确认密码："))
         self.pushButton_5.setText(_translate("login", "注册"))
-import resource_rc
 
 
 if __name__ == "__main__":

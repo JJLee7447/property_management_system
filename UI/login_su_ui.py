@@ -14,8 +14,6 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_login(object):
     def setupUi(self, login):
         login.setObjectName("login")
-        # login.setWindowFlags(QtCore.Qt.FramelessWindowHint)
-        # login.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         login.resize(824, 628)
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -157,10 +155,7 @@ class Ui_login(object):
 "}")
         self.pushButton_5.setObjectName("pushButton_5")
         login.setCentralWidget(self.centralwidget)
-        self.label.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=0, yOffset=0))
-        self.label_2.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=0, yOffset=0))
-        self.pushButton_3.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=0, yOffset=0))
-        self.pushButton_5.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=0, yOffset=0))
+
         self.retranslateUi(login)
         self.pushButton_4.clicked.connect(login.close) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(login)
